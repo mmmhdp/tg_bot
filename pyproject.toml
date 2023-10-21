@@ -1,0 +1,17 @@
+[tool.poetry]
+name = "tg-bot"
+version = "0.1.0"
+description = ""
+authors = ["mmmhdp <malcevnik99@gmail.com>"]
+readme = "README.md"
+packages = [{include = "tg_bot"}]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+requests = "^2.31.0"
+python-telegram-bot = "^20.6"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
