@@ -31,7 +31,6 @@ class WeatherApi:
         result = requests.get(url=url)
         raw_info = result.text
         info = json.loads(raw_info)
-        print(info)
         try:
             lat, lon = info[0]["lat"], info[0]["lon"]
         except IndexError:

@@ -88,7 +88,7 @@ def main() -> None:
         states={
             0: [MessageHandler(filters.LOCATION, get_location_and_show_weather)]
         },
-        fallbacks=[MessageHandler(filters.TEXT, after_answer)]
+        fallbacks=[CommandHandler("idle", after_answer)]
     )
 
     another_city_conv_handler = ConversationHandler(
@@ -99,7 +99,7 @@ def main() -> None:
         states={
             0: [MessageHandler(filters.TEXT, get_city_name_and_show_weather)],
         },
-        fallbacks=[MessageHandler(filters.TEXT, after_answer)]
+        fallbacks=[CommandHandler("idle", after_answer)]
     )
 
     application.add_handler(curr_day_conv_handler)
